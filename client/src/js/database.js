@@ -1,7 +1,6 @@
-//import for indexedDB
+// Import
 import { openDB } from 'idb';
-
-//init database
+// Database Init
 const initdb = async () =>
   openDB('jate', 1, {
     upgrade(db) {
@@ -13,8 +12,7 @@ const initdb = async () =>
       console.log('jate database created');
     },
   });
-
-//Add logic to a method that accepts some content and adds it to the database
+// Adds some content to database
 export const putDb = async (content) => {
   try {
     console.log(content)
@@ -29,8 +27,7 @@ export const putDb = async (content) => {
     console.error('put failed')
   }
 }
-
-//Add logic for a method that gets all the content from the database
+// Add all the content from database
 export const getDb = async () => {
   try {
     const jateDb = await openDB('jate', 1);
@@ -45,6 +42,5 @@ export const getDb = async () => {
     console.error('get failed')
   }
 }
-
-//start the database
+// Run Database
 initdb();

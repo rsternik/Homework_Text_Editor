@@ -1,11 +1,14 @@
+//imports for workbox/editor/database/style.css
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
 
+//set main class innerHTML to empty string
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
+//loadSpinner method
 const loadSpinner = () => {
   const spinner = document.createElement('div');
   spinner.classList.add('spinner');
