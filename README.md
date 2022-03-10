@@ -8,7 +8,6 @@ A browser based text editor that can run with or without internet connection
 
 - NodeJS
 - Express
-- NPM IDB (indexedDB)
 
 ## GitHub Repo
 
